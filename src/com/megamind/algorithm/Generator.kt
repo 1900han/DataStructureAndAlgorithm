@@ -1,4 +1,4 @@
-package com.megamind.ds
+package com.megamind.algorithm
 
 import kotlin.random.Random
 

@@ -1,10 +1,10 @@
-package com.megamind.ds
+package com.megamind.algorithm
 
-import com.megamind.ds.insertion_sort.insertionSort
-import com.megamind.ds.insertion_sort.insertionSort2
-import com.megamind.ds.insertion_sort.insertionSort3
-import com.megamind.ds.selection_sort.selectionSort
-import com.megamind.ds.selection_sort.selectionSort2
+import com.megamind.algorithm.insertion_sort.insertionSort
+import com.megamind.algorithm.insertion_sort.insertionSort2
+import com.megamind.algorithm.insertion_sort.insertionSort3
+import com.megamind.algorithm.selection_sort.selectionSort
+import com.megamind.algorithm.selection_sort.selectionSort2
 import java.lang.RuntimeException
 import java.math.BigDecimal
 import java.math.RoundingMode

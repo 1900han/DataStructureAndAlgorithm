@@ -1,8 +1,8 @@
-package com.megamind.ds.selection_sort
+package com.megamind.algorithm.selection_sort
 
-import com.megamind.ds.generateRandomArray
-import com.megamind.ds.sortTest
-import com.megamind.ds.swap
+import com.megamind.algorithm.generateRandomArray
+import com.megamind.algorithm.sortTest
+import com.megamind.algorithm.swap
 
 fun <T : Comparable<T>> selectionSort(arr: Array<T>) {
     val size = arr.size

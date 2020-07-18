@@ -1,8 +1,8 @@
-package com.megamind.ds.insertion_sort
+package com.megamind.algorithm.insertion_sort
 
-import com.megamind.ds.generateRandomArray
-import com.megamind.ds.sortTest
-import com.megamind.ds.swap
+import com.megamind.algorithm.generateRandomArray
+import com.megamind.algorithm.sortTest
+import com.megamind.algorithm.swap
 
 fun <T : Comparable<T>> insertionSort(arr: Array<T>) {
     for (i in arr.indices) {
@@ -47,7 +47,7 @@ fun <T : Comparable<T>> insertionSort3(arr: Array<T>) {
 }
 
 fun main() {
-    val dataSize = intArrayOf(10_000, 100_000)
+    val dataSize = intArrayOf(10_000, 100_000,1_000_000)
     for (n in dataSize) {
 //        println("Random Array : ")
 //        val arr = generateRandomArray(n, n)

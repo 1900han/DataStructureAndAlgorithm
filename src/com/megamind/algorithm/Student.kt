@@ -1,4 +1,4 @@
-package com.megamind.ds
+package com.megamind.algorithm
 
 data class Student(val name: String, val score: Int) : Comparable<Student> {
     override fun compareTo(other: Student): Int {

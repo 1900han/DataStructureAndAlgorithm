@@ -1,6 +1,6 @@
-package com.megamind.ds.linear_search
+package com.megamind.algorithm.linear_search
 
-import com.megamind.ds.generateOrderedArray
+import com.megamind.algorithm.generateOrderedArray
 
 
 fun <T> linearSearch(data: Array<T>, target: T): Int {
