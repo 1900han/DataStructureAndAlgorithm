@@ -3,6 +3,7 @@ package com.megamind.algorithm
 import com.megamind.algorithm.insertion_sort.insertionSort
 import com.megamind.algorithm.insertion_sort.insertionSort2
 import com.megamind.algorithm.insertion_sort.insertionSort3
+import com.megamind.algorithm.merge_sort.mergeSort
 import com.megamind.algorithm.selection_sort.selectionSort
 import com.megamind.algorithm.selection_sort.selectionSort2
 import java.lang.RuntimeException
@@ -34,6 +35,9 @@ fun <T : Comparable<T>> sortTest(sortName: String, arr: Array<T>) {
         }
         "insertionSort3" -> {
             insertionSort3(arr)
+        }
+        "mergeSort" -> {
+            mergeSort(arr)
         }
     }
     val endTime = System.nanoTime()
