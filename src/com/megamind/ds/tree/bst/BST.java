@@ -1,10 +1,8 @@
 package com.megamind.ds.tree.bst;
 
 import com.megamind.ds.stack.ArrayStack;
-import com.megamind.ds.stack.Stack;
 import com.megamind.ds.tree.TreeNode;
 
-import javax.xml.soap.Node;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
