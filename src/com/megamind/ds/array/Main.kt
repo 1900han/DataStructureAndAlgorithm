@@ -1,7 +1,5 @@
 package com.megamind.ds.array
 
-import com.megamind.algorithm.Student
-
 fun main() {
     val dynamicArray = DynamicArray<Int>()
     for (i in 0 until 10) {
