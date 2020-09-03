@@ -14,15 +14,29 @@ public class FindKthLargest {
          * 如：k 是 nums.length ，就是要找最小元素，对应的 selectK 的索引，就是 0
          * 之间的转换关系是 nums.length - k
          */
-        return selectK(nums, 0, nums.length - 1, nums.length - k, random);
+        return selectK(nums, nums.length - k, random);
     }
 
-    private int selectK(int[] nums, int l, int r, int k, Random random) {
+    private int selectK(int[] nums, int k, Random rand) {
+        int l = 0;
+        int r = nums.length - 1;
+        while (l <= r) {
+            int p = partition(nums, l, r, rand);
+            if (k == p) return nums[p];
+            if (k < p)
+                r = p - 1;
+            else
+                l = p + 1;
+        }
+        throw new RuntimeException("No solution");
+    }
+
+    private int selectKRecursion(int[] nums, int l, int r, int k, Random random) {
         int p = partition(nums, l, r, random);
         if (k == p) return nums[p];
 
-        if (k < p) return selectK(nums, l, p - 1, k, random);
-        return selectK(nums, p + 1, r, k, random);
+        if (k < p) return selectKRecursion(nums, l, p - 1, k, random);
+        return selectKRecursion(nums, p + 1, r, k, random);
     }
 
     private int partition(int[] nums, int l, int r, Random random) {
