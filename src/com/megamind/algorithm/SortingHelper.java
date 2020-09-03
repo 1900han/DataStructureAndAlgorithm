@@ -1,6 +1,10 @@
 package com.megamind.algorithm;
 
 import com.megamind.algorithm.insertion_sort.InsertionSortKt;
+import com.megamind.algorithm.quick_sort.QuickSort;
+import com.megamind.algorithm.quick_sort.QuickSort2Ways;
+import com.megamind.algorithm.quick_sort.QuickSort3Ways;
+import com.megamind.algorithm.quick_sort.QuickSortOptimize;
 import com.megamind.algorithm.selection_sort.SelectionSortKt;
 
 import java.math.BigDecimal;
@@ -51,11 +55,27 @@ public class SortingHelper {
                 mergeSort(arr);
                 break;
             }
+            case "QuickSort": {
+                QuickSort.sort(arr);
+                break;
+            }
+            case "QuickSortOptimize": {
+                QuickSortOptimize.sort(arr);
+                break;
+            }
+            case "QuickSort2Ways": {
+                QuickSort2Ways.sort(arr);
+                break;
+            }
+            case "QuickSort3Ways": {
+                QuickSort3Ways.sort(arr);
+                break;
+            }
             default:
                 break;
         }
         long endTime = System.nanoTime();
-        BigDecimal duration = new BigDecimal((endTime - startTime) / 1000_000_000.0).setScale(6, RoundingMode.HALF_UP);
+        BigDecimal duration = BigDecimal.valueOf((endTime - startTime) / 1000_000_000.0).setScale(6, RoundingMode.HALF_UP);
         if (!isSorted(arr)) {
             throw new RuntimeException(sortName + " failed");
         }
