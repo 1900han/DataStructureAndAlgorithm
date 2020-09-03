@@ -1,7 +1,7 @@
 package com.megamind.algorithm.merge_sort
 
+import com.megamind.algorithm.SortingHelper
 import com.megamind.algorithm.generateRandomArray
-import com.megamind.algorithm.sortTest
 import java.util.*
 
 fun <E : Comparable<E>> merge(arr: Array<E>, l: Int, mid: Int, r: Int) {
@@ -45,7 +45,7 @@ fun main() {
     val dataSize = intArrayOf(10_000, 100_000, 1_000_000)
     for (n in dataSize) {
         val arr = generateRandomArray(n, n)
-        sortTest("mergeSort", arr)
+        SortingHelper.sortTest("mergeSort", arr)
     }
 }
 

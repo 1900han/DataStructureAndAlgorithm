@@ -1,8 +1,7 @@
 package com.megamind.algorithm.selection_sort
 
+import com.megamind.algorithm.SortingHelper
 import com.megamind.algorithm.generateRandomArray
-import com.megamind.algorithm.sortTest
-import com.megamind.algorithm.swap
 
 fun <T : Comparable<T>> selectionSort(arr: Array<T>) {
     val size = arr.size
@@ -15,7 +14,7 @@ fun <T : Comparable<T>> selectionSort(arr: Array<T>) {
             }
             j++
         }
-        swap(arr, i, minIndex)
+        SortingHelper.swap(arr, i, minIndex)
     }
 }
 
@@ -30,7 +29,7 @@ fun <T : Comparable<T>> selectionSort2(arr: Array<T>) {
             }
             j--
         }
-        swap(arr, i, minIndex)
+        SortingHelper.swap(arr, i, minIndex)
     }
 }
 
@@ -39,7 +38,7 @@ fun main() {
     val dataSize = intArrayOf(10_000, 100_000)
     for (n in dataSize) {
         val arr = generateRandomArray(n, n)
-        sortTest("selectionSort", arr)
-        sortTest("selectionSort2", arr)
+        SortingHelper.sortTest("selectionSort", arr)
+        SortingHelper.sortTest("selectionSort2", arr)
     }
 }

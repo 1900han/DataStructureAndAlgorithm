@@ -1,15 +1,14 @@
 package com.megamind.algorithm.insertion_sort
 
+import com.megamind.algorithm.SortingHelper
 import com.megamind.algorithm.generateRandomArray
-import com.megamind.algorithm.sortTest
-import com.megamind.algorithm.swap
 
 fun <T : Comparable<T>> insertionSort(arr: Array<T>) {
     for (i in arr.indices) {
         var j = i
         while (j - 1 >= 0) {
             if (arr[j] < arr[j - 1]) {
-                swap(arr, j, j - 1)
+                SortingHelper.swap(arr, j, j - 1)
             } else {
                 break
             }
@@ -62,6 +61,6 @@ fun main() {
 //        sortTest("selectionSort", arr4)
 
         val arr5 = generateRandomArray(n, n)
-        sortTest("insertionSort3", arr5)
+        SortingHelper.sortTest("insertionSort3", arr5)
     }
 }
